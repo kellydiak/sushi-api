@@ -12,11 +12,12 @@ class Box (
     var nom: String,
     var nbPieces : Int,
     var prix : Double,
-    var nomImage : String,
+    var nom_Image : String,
 
     // Relation Many2Many des boxes aux saveurs
     @ManyToMany
-    @JoinTable(name = "saveurs_boxes",
+    @JoinTable(
+        name = "saveurs_boxes",
         joinColumns = [JoinColumn(name = "fk_box_id")],
         inverseJoinColumns = [JoinColumn(name = "fk_saveur_id")]
     )
